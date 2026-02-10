@@ -1,0 +1,36 @@
+2026-02-10 14:45:52,372 | INFO | ===== START TABLE MARA =====
+2026-02-10 14:45:52,372 | INFO | Opening DB: C:/Users/PranayHarishchandra/Desktop/s_workspace/LQUA.accdb
+2026-02-10 14:45:54,883 | INFO | Clearing table: LQUA
+2026-02-10 14:45:54,892 | ERROR | FAILED for MARA: (-2147352567, 'Exception occurred.', (0, None, 'The RunSQL action was canceled.', None, -1, -2146825787), None)
+2026-02-10 14:45:54,892 | INFO | Closing DB
+2026-02-10 14:46:19,460 | INFO | ===== START TABLE LQUA =====
+2026-02-10 14:46:19,462 | INFO | Opening DB: C:/Users/PranayHarishchandra/Desktop/s_workspace/LQUA.accdb
+2026-02-10 14:46:21,704 | INFO | Clearing table: LQUA
+2026-02-10 14:46:21,722 | ERROR | FAILED for LQUA: (-2147352567, 'Exception occurred.', (0, None, 'The RunSQL action was canceled.', None, -1, -2146825787), None)
+2026-02-10 14:46:21,722 | INFO | Closing DB
+2026-02-10 14:46:39,372 | INFO | ===== START TABLE LQUA =====
+2026-02-10 14:46:39,372 | INFO | Opening DB: C:/Users/PranayHarishchandra/Desktop/s_workspace/LQUA.accdb
+2026-02-10 14:46:41,665 | INFO | Clearing table: LQUA
+2026-02-10 14:46:41,681 | ERROR | FAILED for LQUA: (-2147352567, 'Exception occurred.', (0, None, 'The RunSQL action was canceled.', None, -1, -2146825787), None)
+2026-02-10 14:46:41,681 | INFO | Closing DB
+2026-02-10 14:47:20,764 | INFO | ===== START TABLE LQUA =====
+2026-02-10 14:47:20,764 | INFO | Opening DB: C:/Users/PranayHarishchandra/Desktop/s_workspace/LQUA.accdb
+2026-02-10 14:47:22,873 | INFO | Clearing table: LQUA
+2026-02-10 14:47:22,923 | ERROR | FAILED for LQUA: (-2147352567, 'Exception occurred.', (0, None, 'The RunSQL action was canceled.', None, -1, -2146825787), None)
+2026-02-10 14:47:22,923 | INFO | Closing DB
+2026-02-10 14:52:43,342 | INFO | ===== START TABLE LQUA =====
+2026-02-10 14:52:43,342 | INFO | Opening DB: C:/Users/PranayHarishchandra/Desktop/s_workspace/LQUA.accdb
+2026-02-10 14:52:45,676 | INFO | Clearing table: LQUA
+2026-02-10 14:52:45,710 | ERROR | FAILED for LQUA: (-2147352567, 'Exception occurred.', (0, 'DAO.Database', 'Could not delete from specified tables.', 'jeterr40.chm', 5003086, -2146825202), None)
+2026-02-10 14:52:45,710 | INFO | Closing DB
+2026-02-10 16:01:38,813 | INFO | ===== START TABLE LQUA =====
+2026-02-10 16:01:38,813 | INFO | Opening DB: C:/Users/PranayHarishchandra/Desktop/s_workspace/LQUA.accdb
+2026-02-10 16:01:38,827 | ERROR | FAILED for LQUA: (-2147352567, 'Exception occurred.', (0, None, 'You already have the database open.', None, -1, -2146820421), None)
+2026-02-10 16:03:51,748 | INFO | ===== START TABLE LQUA =====
+2026-02-10 16:03:51,749 | INFO | Opening DB: C:/Users/PranayHarishchandra/Desktop/s_workspace/LQUA.accdb
+2026-02-10 16:03:54,659 | INFO | Clearing table: LQUA
+2026-02-10 16:03:54,726 | ERROR | FAILED for LQUA: (-2147352567, 'Exception occurred.', (0, 'DAO.Database', 'Could not delete from specified tables.', 'jeterr40.chm', 5003086, -2146825202), None)
+2026-02-10 16:03:54,726 | INFO | Closing DB
+2026-02-10 17:27:21,390 | INFO | ===== START TABLE LQUA =====
+2026-02-10 17:27:21,390 | INFO | Opening DB: C:/Users/PranayHarishchandra/Desktop/s_workspace/LQUA.accdb
+2026-02-10 17:27:21,430 | ERROR | FAILED for LQUA: (-2147352567, 'Exception occurred.', (0, None, 'You already have the database open.', None, -1, -2146820421), None)

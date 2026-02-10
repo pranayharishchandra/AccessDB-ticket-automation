@@ -50,7 +50,8 @@ def clear_table(access, table_name):
     logging.info(f"Clearing table: {table_name}")
 
     sql_delete = f"DELETE FROM {table_name};"
-    access.DoCmd.RunSQL(sql_delete)
+    # access.DoCmd.RunSQL(sql_delete)
+    access.CurrentDb().Execute(sql_delete) # Using Execute is more efficient and does not prompt for confirmation.
 
     # Validation
     rs = access.CurrentDb().OpenRecordset(

@@ -1,61 +1,44 @@
-import sys
-import os
-from pathlib import Path
 import pyodbc
-
-
-# this is correct
-def find_accdb_files(directory: Path):
-    """Return sorted list of .accdb files in directory."""
-    return sorted([p for p in directory.iterdir() if p.is_file() and p.suffix.lower() == ".accdb"])
+from pathlib import Path
 
 
 def clear_database(db_path: Path):
-    """Connect to Access DB at db_path and delete all rows from user tables."""
     print(f"\nClearing database: {db_path.name}")
-    conn = None
-    cursor = None
-    try:
-        conn_str = (
-            r"DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};"
-            + "DBQ="
-            + str(db_path)
-            + ";"
-        )
-        conn = pyodbc.connect(conn_str)
-        cursor = conn.cursor()
 
-        tables = []
-        for row in cursor.tables(tableType="TABLE"):
-            table_name = row.table_name
-            # Skip system tables
-            if not table_name.startswith("MSys"):
-                tables.append(table_name)
+    conn_str = (
+        r"DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};"
+        + f"DBQ={db_path};"
+    )
+
+    conn = pyodbc.connect(conn_str, autocommit=False)
+    cursor = conn.cursor()
+
+    try:
+        tables = [
+            row.table_name
+            for row in cursor.tables(tableType="TABLE")
+            if not row.table_name.startswith("MSys")
+        ]
 
         if not tables:
             print("  No user tables found.")
             return
 
         for table in tables:
-            print(f"  Deleting data from table: {table}")
+            print(f"  Deleting data from: {table}")
             cursor.execute(f"DELETE FROM [{table}]")
 
         conn.commit()
-        print("  Done: all user tables cleared.")
+        print("  Database cleared successfully.")
 
     except Exception as e:
-        print(f"  Error while clearing {db_path.name}: {e}")
+        conn.rollback()
+        raise RuntimeError(f"Clear failed for {db_path.name}: {e}")
+
     finally:
-        try:
-            if cursor is not None:
-                cursor.close()
-        except Exception:
-            pass
-        try:
-            if conn is not None:
-                conn.close()
-        except Exception:
-            pass
+        cursor.close()
+        conn.close()
+
 
 
 def main():
