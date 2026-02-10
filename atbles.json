@@ -1,0 +1,10 @@
+{
+  "MARA": {
+    "db_path": "S:/ECD_Data/MARA.accdb",
+    "table_name": "MARA"
+  },
+  "MARC": {
+    "db_path": "S:/ECD_Data/MARC.accdb",
+    "table_name": "MARC"
+  }
+}
