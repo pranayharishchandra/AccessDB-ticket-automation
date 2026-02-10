@@ -34,3 +34,15 @@
 2026-02-10 17:27:21,390 | INFO | ===== START TABLE LQUA =====
 2026-02-10 17:27:21,390 | INFO | Opening DB: C:/Users/PranayHarishchandra/Desktop/s_workspace/LQUA.accdb
 2026-02-10 17:27:21,430 | ERROR | FAILED for LQUA: (-2147352567, 'Exception occurred.', (0, None, 'You already have the database open.', None, -1, -2146820421), None)
+2026-02-10 17:41:24,034 | INFO | ===== START TABLE LQUA =====
+2026-02-10 17:41:24,036 | INFO | Opening DB: C:/Users/PranayHarishchandra/Desktop/s_workspace/LQUA.accdb
+2026-02-10 17:41:26,450 | INFO | Clearing table: LQUA
+2026-02-10 17:41:26,520 | ERROR | FAILED for LQUA: (-2147352567, 'Exception occurred.', (0, 'DAO.Database', 'Could not delete from specified tables.', 'jeterr40.chm', 5003086, -2146825202), None)
+2026-02-10 17:41:26,520 | INFO | Closing DB
+2026-02-10 17:54:58,095 | INFO | pranay Loaded config from tables.json
+2026-02-10 17:54:58,095 | INFO | Starting loader with config: dict_items([('LQUA', {'db_path': 'C:/Users/PranayHarishchandra/Desktop/s_workspace/LQUA.accdb', 'table_name': 'LQUA'})])
+2026-02-10 17:54:58,095 | INFO | ===== START TABLE LQUA =====
+2026-02-10 17:54:58,095 | INFO | Opening DB: C:/Users/PranayHarishchandra/Desktop/s_workspace/LQUA.accdb
+2026-02-10 17:55:00,203 | INFO | Clearing table: LQUA
+2026-02-10 17:55:00,256 | ERROR | FAILED for LQUA: (-2147352567, 'Exception occurred.', (0, 'DAO.Database', 'Could not delete from specified tables.', 'jeterr40.chm', 5003086, -2146825202), None)
+2026-02-10 17:55:00,257 | INFO | Closing DB

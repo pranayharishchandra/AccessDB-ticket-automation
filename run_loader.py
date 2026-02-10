@@ -1,6 +1,7 @@
 import json
 import logging
 import sys
+import os
 import win32com.client
 
 
@@ -20,7 +21,7 @@ def setup_logging():
 
 
 def load_config(path="tables.json"):
-    with open(path, "r") as f:
+    with open(path, "r") as f:      
         return json.load(f)
 
 
@@ -29,8 +30,14 @@ def load_config(path="tables.json"):
 # ----------------------------
 
 def open_access_db(db_path):
+    # Check for lock file (.laccdb)
+    lock_file = db_path.replace(".accdb", ".laccdb")
+    if os.path.exists(lock_file):
+        logging.warning(f"Lock file detected: {lock_file}. Make sure Access is closed!")
+    
     logging.info(f"Opening DB: {db_path}")
-    access = win32com.client.Dispatch("Access.Application")
+    # Using DispatchEx forces a NEW instance of Access
+    access = win32com.client.DispatchEx("Access.Application")
     access.OpenCurrentDatabase(db_path)
     access.Visible = False
     return access
@@ -50,8 +57,8 @@ def clear_table(access, table_name):
     logging.info(f"Clearing table: {table_name}")
 
     sql_delete = f"DELETE FROM {table_name};"
-    # access.DoCmd.RunSQL(sql_delete)
-    access.CurrentDb().Execute(sql_delete) # Using Execute is more efficient and does not prompt for confirmation.
+    access.DoCmd.RunSQL(sql_delete)
+    # access.CurrentDb().Execute(sql_delete) # Using Execute is more efficient and does not prompt for confirmation.
 
     # Validation
     rs = access.CurrentDb().OpenRecordset(
