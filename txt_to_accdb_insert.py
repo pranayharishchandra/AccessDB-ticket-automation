@@ -3,11 +3,11 @@ import csv
 
 conn = pyodbc.connect(
     r"DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};"
-    r"DBQ=C:\Users\PranayHarishchandra\Desktop\s_workspace\LQUA.accdb;"
+    r"DBQ=C:\\Users\\PranayHarishchandra\\Desktop\\s_workspace\\LQUA.accdb;"
 )
 cursor = conn.cursor()
 
-txt_file = r"C:\Users\PranayHarishchandra\Desktop\s_workspace\LQUA.TXT"
+txt_file = r"C:\\Users\\PranayHarishchandra\\Desktop\\s_workspace\\LQUA.TXT"
 
 
 tables = []

@@ -6,8 +6,11 @@ import pyodbc
 
 # this is correct
 def find_accdb_files(directory: Path):
+    print(f"==================================================== directory: {directory}")
+
+    directory = "C:\\Users\\PranayHarishchandra\\Desktop\\s_workspace\\test"
     """Return sorted list of .accdb files in directory."""
-    return sorted([p for p in directory.iterdir() if p.is_file() and p.suffix.lower() == ".accdb"])
+    return sorted([p for p in Path(directory).iterdir() if p.is_file() and p.suffix.lower() == ".accdb"])
 
 
 def clear_database(db_path: Path):
