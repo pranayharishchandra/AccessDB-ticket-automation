@@ -3,3 +3,6 @@
 
 # Ignore text files
 *.txt
+
+
+/dist
